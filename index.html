@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="titulo">SORTEADOR</h1>
+    <div class="secao">
+        <div class="container">
+            <div class="inner-container">
+                <h2 class="subtitulo">Insira coisas a serem sorteadas:</h2>
+                <label for="campo" class="erro"></label>
+                <input id="campo" type="text" maxlength="32" />
+                <button class="button" onclick="Adicionar()">ADICIONAR</button>
+            </div>
+
+            <div class="sorteado">
+                <button type="" class="button btnSortear" onclick="Sortear()">SORTEAR</button>
+                <div class="item-sorteado-container">
+                </div>
+            </div>
+
+            <div class="resultado-container">
+                <ul class="resultado-itens">
+                    <!--<div class="item-container">
+                        <li class="item">Item 1 </li>
+                        <button class="btnDel" onclick="Delete(this.parentNode)">X</button>
+                    </div>
+                    <div class="item-container">
+                        <li class="item ">Item 2 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>
+                    <div class="item-container ">
+                        <li class="item ">Item 3 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>
+                    <div class="item-container ">
+                        <li class="item ">Item 4 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>
+                    <div class="item-container ">
+                        <li class="item ">Item 5 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>
+                    <div class="item-container ">
+                        <li class="item ">Item 6 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>
+                    <div class="item-container ">
+                        <li class="item ">Item 7 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>
+                    <div class="item-container ">
+                        <li class="item ">Item 8 rewqrewqrewqr</li>
+                        <button class="btnDel" onclick="Delete(this.parentNode) ">X</button>
+                    </div>-->
+                </ul>
+            </div>
+            <h6 id="version">V. ALPHA</h6>
+        </div>
+    </div>
+
+</body>
+<script src="main.js "></script>
+
+</html>
