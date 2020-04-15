@@ -172,6 +172,7 @@ ul.resultado-itens {
 
 .item-sorteado {
     padding: 5px;
+    color: rgb(113, 89, 193);
 }
 
 .btnSortear {
@@ -182,4 +183,20 @@ ul.resultado-itens {
 #version {
     color: red;
     text-indent: 10px;
+}
+
+.group {
+    display: flex;
+    width: 40%;
+}
+
+.option {
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid white;
+    background: grey;
+}
+
+.option.selected {
+    background: rgb(113, 89, 193);
 }

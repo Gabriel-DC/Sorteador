@@ -8,7 +8,25 @@ const elementos = resultado_itens.childNodes;
 const obj = [];
 const obj_sorteado = [];
 
-function Delete(element) {
+var option = 1;
+
+
+function optionSelected(element) {
+    option = element.value;
+    const pai = element.parentNode;
+    const filhos = pai.children;
+
+    for (let i = 0; i < filhos.length; i++) {
+        filhos[i].classList.remove('selected')
+    }
+
+    element.classList.add('selected');
+}
+
+
+
+
+function Delete(element = null) {
     const del_item = element.childNodes[0].innerText;
 
     obj_sorteado.splice(obj_sorteado.indexOf(del_item), 1);
@@ -46,6 +64,7 @@ function MakeNewItem() {
     input.focus();
 }
 
+
 function Sortear() {
     const item_sorteado_container = document.querySelector("div.item-sorteado-container");
     item_sorteado_container.childNodes[0].remove();
@@ -66,9 +85,28 @@ function Sortear() {
     const new_sort = document.createElement("h2");
     new_sort.classList.add("item-sorteado");
     new_sort.innerHTML = `${rdn_obj}`;
-    //console.log(rdn_obj)
     item_sorteado_container.appendChild(new_sort);
 
-
     item_sorteado_container.style.height = "45px";
+
+    const capsulas = Array.from(resultado_itens.children);
+
+    capsulas.forEach(filho => {
+        if (filho.childNodes[0].innerText === rdn_obj)
+            filho.remove();
+
+    })
+
+
 }
+
+/*function Sortear() {
+    const item_sorteado_container = document.querySelector("div.item-sorteado-container");
+
+    item_sorteado_container.childNodes[0].remove();
+
+    const obj_not_sorteado = obj.filter(value => obj_sorteado.indexOf(value) === -1);
+
+
+
+}*/
