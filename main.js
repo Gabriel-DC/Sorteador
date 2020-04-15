@@ -55,7 +55,7 @@ function Sortear() {
 
     const randomic = (tam) => Math.floor(Math.random() * tam);
 
-    const rdn_obj = obj_not_sorteado[randomic(obj_not_sorteado.length)];
+    var rdn_obj = obj_not_sorteado[randomic(obj_not_sorteado.length)];
 
     if (rdn_obj != undefined) {
         obj_sorteado.push(rdn_obj);
