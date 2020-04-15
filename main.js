@@ -8,10 +8,11 @@ const elementos = resultado_itens.childNodes;
 const obj = [];
 const obj_sorteado = [];
 
-console.log(elementos);
-
 function Delete(element) {
     const del_item = element.childNodes[0].innerText;
+
+    obj_sorteado.splice(obj_sorteado.indexOf(del_item), 1);
+    console.log(obj_sorteado)
 
     obj.forEach((value, index) => {
         if (value === del_item) {
@@ -50,15 +51,22 @@ function Sortear() {
     item_sorteado_container.childNodes[0].remove();
     const obj_not_sorteado = obj.filter(value => obj_sorteado.indexOf(value) === -1);
 
+    console.log(obj_not_sorteado);
+
     const randomic = (tam) => Math.floor(Math.random() * tam);
 
-    const rdn_obj = obj_not_sorteado[randomic(obj_not_sorteado.length)] != undefined ? obj_not_sorteado[randomic(obj_not_sorteado.length)] : "NENHUM ELEMENTO RESTANTE";
-    obj_sorteado.push(rdn_obj);
+    const rdn_obj = obj_not_sorteado[randomic(obj_not_sorteado.length)];
+
+    if (rdn_obj != undefined) {
+        obj_sorteado.push(rdn_obj);
+    } else {
+        rdn_obj = "NENHUM ELEMENTO RESTANTE";
+    }
 
     const new_sort = document.createElement("h2");
     new_sort.classList.add("item-sorteado");
     new_sort.innerHTML = `${rdn_obj}`;
-    console.log(rdn_obj)
+    //console.log(rdn_obj)
     item_sorteado_container.appendChild(new_sort);
 
 
