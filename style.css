@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto;
 }
 
 body {
     color: white;
-    background: rgb(2, 0, 36);
+    background: rgb(113, 89, 193);
 }
 
 button {
@@ -19,14 +19,16 @@ button {
     font-size: 80px;
     text-align: center;
     user-select: none;
+    font-family: 'Quicksand';
 }
 
 .secao {
     display: block;
     height: 900px;
     padding: 0 40px;
-    color: black;
-    background: rgb(2, 0, 36);
+    font-family: 'Roboto';
+    color: grey;
+    background: rgb(113, 89, 193);
 }
 
 .subtitulo {
@@ -71,13 +73,22 @@ button {
     height: 44px;
     width: 120px;
     margin: 0 auto;
-    background: rgb(2, 0, 36);
+    background: rgb(113, 89, 193);
     color: white;
     outline: none;
     border-radius: 5px;
     font-weight: bold;
     font-size: 16px;
     align-self: flex-start;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    filter: brightness(0.8);
+}
+
+.button:active {
+    transform: scale(0.9);
 }
 
 #campo {
@@ -85,11 +96,12 @@ button {
     padding: 10px;
     align-self: flex-start;
     width: 300px;
+    color: rgb(113, 89, 193);
     font-size: 18px;
     font-weight: bold;
     margin: 0 auto;
     text-align: center;
-    border: solid 1px rgb(2, 0, 36);
+    border: solid 1px grey;
     border-radius: 12px;
     outline: none;
 }
@@ -128,10 +140,10 @@ button {
 
 .item-container {
     display: flex;
-    border: 1px solid black;
+    border: 1px solid rgb(113, 89, 193);
     border-radius: 16px;
     color: white;
-    background: rgb(2, 0, 36);
+    background: rgb(113, 89, 193);
     width: fit-content;
     padding: 4px 6px;
     margin: 4px;
