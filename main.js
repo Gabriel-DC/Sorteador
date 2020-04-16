@@ -93,8 +93,7 @@ function Sortear() {
 
     capsulas.forEach(filho => {
         if (filho.childNodes[0].innerText === rdn_obj)
-            filho.remove();
-
+            Delete(filho);
     })
 
 
