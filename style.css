@@ -112,7 +112,7 @@ button {
     outline: none;
     background: white;
     font-size: 8px;
-    color: rgba(10, 10, 10, 1);
+    color: rgb(113, 89, 193);
     font-weight: bolder;
     align-self: center;
     justify-self: center;
@@ -122,6 +122,12 @@ button {
     margin-left: 4px;
     text-align: center;
     transition: color 0.4s;
+}
+
+.btnDel span.x {
+    display: block;
+    margin-top: 2px;
+    margin-left: -1px;
 }
 
 .btnDel:hover {

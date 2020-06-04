@@ -57,7 +57,7 @@ function MakeNewItem() {
     const new_div = document.createElement("div");
     new_div.innerHTML =
         `<li class="item">${obj[obj.length-1]}</li>
-        <button class="btnDel" onclick="Delete(this.parentNode)">X</button>`;
+        <button class="btnDel" onclick="Delete(this.parentNode)"><span class="x">X</span></button>`;
     new_div.classList.add("item-container");
     resultado_itens.appendChild(new_div);
     input.value = '';
