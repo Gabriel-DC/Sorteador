@@ -42,15 +42,18 @@ function Delete(element = null) {
 }
 
 function Adicionar() {
-    if (obj.some(value => value == input.value.trim())) {
-        alert('JÁ EXISTE');
-    } else if (input.value.trim() != '') {
-        obj.push(input.value.trim());
-        MakeNewItem();
-        console.log(obj);
-    } else {
-        alert('O CAMPO NÃO PODE FICAR VAZIO');
-    }
+    var valores = input.value.split(',');
+    valores.forEach(v => {
+        if (obj.some(value => value == v.trim())) {
+            alert('JÁ EXISTE');
+        } else if (v.trim() != '') {
+            obj.push(v.trim());
+            MakeNewItem();
+            console.log(obj);
+        } else {
+            alert('O CAMPO NÃO PODE FICAR VAZIO');
+        }
+    })    
 }
 
 function MakeNewItem() {
